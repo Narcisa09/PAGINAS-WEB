@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de datos</title>
+    <link rel="stylesheet" href="registrodatos.css">
+
+<body>
+    <header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <a href="#" class="encabezado"><img src="imagen/cabeza.png" alt="encabezado"></a>
+        <ul class="barra">
+
+        </ul>
+        </nav>
+
+        <nav>
+            <ul class="barra">
+                <li class="barra_"><a href="secretaria.html">Inicio</a></li>
+                <li class="barra_"><a href="proceso.html">Secretaria General</a></li>
+                <li class="barra_"><a href="about:blank">Quienes Somos</a></li>
+                <li class="barra_"><a href="about:blank">Contactos</a></li>
+                <li class="barra_"><a href="iniciosesion.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form-content">
+                <h1 id="title">REGISTRO DE DATOS</h1>
+
+                <form>
+                    <div class="input-group">
+                        <div class="btn-field">
+                            <button id="sigUp" type="button"><a href="consulta_datos.html">Estudiantes</a></button>
+                        </div><br>
+
+                        <div class="btn-field">
+                            <button id="sigUp" type="button"><a href="about:blank">Docentes</a></button>
+                        </div><br>
+
+                        <div class="btn-field">
+                            <button id="sigUp" type="button"><a href="about:blank">Personal</a></button>
+                        </div><br>
+
+                        <div class="btn-field">
+                            <button id="sigUp" type="button"><a href="about:blank">Matrículas</a></button>
+                        </div><br>
+
+                        <div class="btn-field">
+                            <button id="sigUp" type="button"><a href="about:blank">Carreras</a></button>
+                        </div><br>
+
+                        <div class="btn-field">
+                            <button id="sigUp" type="button"><a href="about:blank">Horarios</a></button>
+                        </div><br>
+
+                        <div class="btn-field">
+                            <button id="sigUp" type="button"><a href="about:blank">Biblioteca</a></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contenido-footer">
+            <div class="logo">
+                <img src="imagen/logo.png" alt="Logo de la empresa">
+            </div>
+            <div class="enlaces">
+                <ul>
+                    <li></li></a></li>
+                </ul>
+            </div>
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/UleamEc" class="red-social"><img src="imagen/facebook.png"
+                        alt="Logo de Facebook"></a>
+                <a href="https://twitter.com/UleamEcuador" class="red-social"><img src="imagen/twitter.png"
+                        alt="Logo de Twitter"></a>
+                <a href="https://www.instagram.com/uleam_ecuador_oficial/" class="red-social"><img
+                        src="imagen/instagram.png" alt="Logo de Instagram"></a>
+            </div>
+        </div>
+        <div class="derechos-autor">
+            ULEAM © Copyright 2020, Todos los derechos reservados - Universidad Laica Eloy Alfaro de Manabí<br>
+            Dirección: Av. Circunvalación - Vía a San Mateo<br>
+            Manta - Manabí - Ecuador
+        </div>
+    </footer>
+</body>
+<script>
+    let signUp = document.getElementById("signUp");
+    let signIn = document.getElementById("signIn");
+    let nameInput = document.getElementById("nameInput");
+    let title = document.getElementById("title");
+
+    signUp.onclick = function () {
+        nameInput.style.maxHeight = "0px";
+        title.innerHTML = "login";
+        signUp.classList.add("disable");
+        signIn.classList.remove("disable");
+    }
+    signUp.onclick = function () {
+        nameInput.style.maxHeight = "60px";
+        title.innerHTML = "Registro";
+        signUp.classList.remove("disable");
+        signIn.classList.add("disable");
+    }
+</script>
+
+</html>

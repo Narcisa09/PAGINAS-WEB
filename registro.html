@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="registro.css">
+
+
+<body>
+    <header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <a href="#" class="encabezado"><img src="imagen/cabeza.png" alt="encabezado"></a>
+        <ul class="barra">
+
+        </ul>
+        </nav>
+
+        <nav>
+
+            <ul class="barra">
+                <li class="barra_"><a href="secretaria.html">Inicio</a></li>
+                <li class="barra_"><a href="#"></a></li>
+                <li class="barra_"><a href="#"></a></li>
+                <li class="barra_"><a href="#"></a></li>
+                <li class="barra_"><a href="#"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form-content">
+                <h1 id="title">REGISTRO DE USUARIO</h1>
+
+                <form>
+                    <div class="input-group">
+                        <div class="input-field" id="nameInput">
+                            <input type="text" placeholder="Nombres">
+                        </div>
+
+                        <div class="input-field" id="apellidosInput">
+                            <input type="text" placeholder="Apellidos">
+                        </div>
+
+                        <div class="input-field">
+                            <input type="email" placeholder="Correo  electónico">
+                        </div>
+
+                        <div class="input-field">
+                            <input type="password" placeholder="Contraseña">
+                        </div>
+
+                        <div class="input-field">
+                            <input type="password" placeholder="Repetir contraseña">
+                        </div>
+
+                        <div class="input-field" id="nacimientoInput">
+                            <input type="text" placeholder="Fecha de nacimiento">
+                        </div>
+
+                        <div class="input-field" id="sexoInput">
+                            <input type="text" placeholder="Sexo">
+                        </div>
+
+                        <div class="btn-field">
+                            <a href="iniciosesion.html"><button id="signUp" type="button">Registrarse</button></a>
+                        </div>
+
+                        <div class="btn-field">
+                            <a href="iniciosesion.html"><button id="signIn" type="button">Iniciar sesión</button></a>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="contenido-footer">
+            <div class="logo">
+                <img src="imagen/logo.png" alt="Logo de la empresa">
+            </div>
+            <div class="enlaces">
+                <ul>
+                    <li></li></a></li>
+
+                </ul>
+            </div>
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/UleamEc" class="red-social"><img src="imagen/facebook.png"
+                        alt="Logo de Facebook"></a>
+                <a href="https://twitter.com/UleamEcuador" class="red-social"><img src="imagen/twitter.png"
+                        alt="Logo de Twitter"></a>
+                <a href="https://www.instagram.com/uleam_ecuador_oficial/" class="red-social"><img
+                        src="imagen/instagram.png" alt="Logo de Instagram"></a>
+            </div>
+        </div>
+        <div class="derechos-autor">
+            ULEAM © Copyright 2020, Todos los derechos reservados - Universidad Laica Eloy Alfaro de Manabí<br>
+            Dirección: Av. Circunvalación - Vía a San Mateo<br>
+            Manta - Manabí - Ecuador
+        </div>
+    </footer>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#signUp').click(function () {
+            // Obtén los valores de los campos del formulario
+            var nombres = $('#nameInput input').val();
+            var apellidos = $('#apellidosInput input').val();
+            var email = $('input[type="email"]').val();
+            var password = $('input[type="password"]').val();
+            var confirmPassword = $('input[type="password"]:eq(1)').val();
+            var fechaNacimiento = $('#nacimientoInput input').val();
+            var sexo = $('#sexoInput input').val();
+
+            // Realiza la validación básica (puedes agregar más validaciones según tus necesidades)
+            if (nombres === "" || apellidos === "" || email === "" || password === "" || confirmPassword === "" || fechaNacimiento === "" || sexo === "") {
+                alert("Por favor, completa todos los campos.");
+            } else if (password !== confirmPassword) {
+                alert("Las contraseñas no coinciden.");
+            } else {
+                // Envía el formulario si la validación pasa
+                alert("Registro exitoso");
+                // Puedes redirigir al usuario a una página de inicio de sesión o hacer lo que necesites aquí
+                window.location.href = "iniciosesion.html";
+            }
+        });
+    });
+</script>
+
+
+</html>

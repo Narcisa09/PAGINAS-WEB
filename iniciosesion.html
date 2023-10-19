@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio_Sesión</title>
+    <link rel="stylesheet" href="iniciosesion.css">
+
+<body>
+    <header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <a href="#" class="encabezado"><img src="imagen/cabeza.png" alt="encabezado"></a>
+        <ul class="barra">
+
+        </ul>
+        </nav>
+
+        <nav>
+
+            <ul class="barra">
+                <li class="barra_"><a href="secretaria.html">Inicio</a></li>
+                <li class="barra_"><a href="#"></a></li>
+                <li class="barra_"><a href="#"></a></li>
+                <li class="barra_"><a href="#"></a></li>
+                <li class="barra_"><a href="#"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form-content">
+
+                <form>
+                    <div class="input-group">
+                        <div class="input-field" id="nameInput">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Nombre de usuario">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Correo">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Contraseña">
+                        </div>
+
+
+                        <div class="btn-field">
+                            <button id="signIn" type="button" onclick="submitForm()">Iniciar sesión</button>
+                            <a href="registro.html">
+                        </div>
+
+                        <p><a href="about:blank">¿Has olvidado tu contraseña?</a><a href="registro.html"><strong>Registrarse</strong></a></p> 
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="contenido-footer">
+            <div class="logo">
+                <img src="imagen/logo.png" alt="Logo de la empresa">
+            </div>
+            <div class="enlaces">
+                <ul>
+                    <li></li></a></li>
+                </ul>
+            </div>
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/UleamEc" class="red-social"><img src="imagen/facebook.png"
+                        alt="Logo de Facebook"></a>
+                <a href="https://twitter.com/UleamEcuador" class="red-social"><img src="imagen/twitter.png"
+                        alt="Logo de Twitter"></a>
+                <a href="https://www.instagram.com/uleam_ecuador_oficial/" class="red-social"><img
+                        src="imagen/instagram.png" alt="Logo de Instagram"></a>
+            </div>
+        </div>
+        <div class="derechos-autor">
+            ULEAM © Copyright 2020, Todos los derechos reservados - Universidad Laica Eloy Alfaro de Manabí<br>
+            Dirección: Av. Circunvalación - Vía a San Mateo<br>
+            Manta - Manabí - Ecuador
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    function submitForm() {
+        var username = document.getElementById('nameInput').getElementsByTagName('input')[0].value;
+        var email = document.querySelector('input[type="email"]').value;
+        var password = document.querySelector('input[type="password"]').value;
+
+        if (username.trim() === "" || email.trim() === "" || password.trim() === "") {
+            alert("Por favor, completa todos los campos.");
+        } else {
+            // Realiza aquí tu lógica de inicio de sesión, como enviar los datos al servidor
+            alert("Iniciando sesión...");
+            // Puedes redirigir al usuario a la página de inicio después de iniciar sesión
+            window.location.href = "registro.html";
+        }
+    }
+</script>
+
+
+
+</html>
